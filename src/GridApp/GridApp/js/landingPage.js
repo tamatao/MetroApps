@@ -1,6 +1,6 @@
 ﻿(function () {
     'use strict';
-
+debugger;
     var listRenderer;
     var headerRenderer;
     var itemRenderer;
@@ -8,6 +8,7 @@
 
     // Custom event raised after the fragment is appended to the DOM.
     WinJS.Application.addEventListener('fragmentappended', function handler(e) {
+		debugger;
         if (e.location === '/html/landingPage.html') { fragmentLoad(e.fragment, e.state); }
     });
 

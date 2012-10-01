@@ -40,7 +40,7 @@
         }
 
     WinJS.Application.onmainwindowactivated = function (e) {
-        if (e.detail.kind === Windows.ApplicationModel.Activation.ActivationKind.launch) {
+        if (true || e.detail.kind === Windows.ApplicationModel.Activation.ActivationKind.launch) {
             homePage = document.body.getAttribute('data-homePage');
 
             document.body.addEventListener('keyup', function (e) {
@@ -68,3 +68,5 @@
     WinJS.Application.start();
 
 })();
+
+function msWriteProfilerMark(t){}

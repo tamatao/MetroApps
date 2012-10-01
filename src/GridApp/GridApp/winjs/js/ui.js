@@ -1283,7 +1283,8 @@ var InvalidHandler = "Invalid data-win-control attribute";
                 
 
                 document.body.appendChild(temp);
-                temp.contentDocument.addEventListener("DOMContentLoaded", domContentLoaded, false);                
+                temp.contentDocument.addEventListener("DOMContentLoaded", domContentLoaded, false);  
+				setTimeout(domContentLoaded,3000);              
             }
             else {
                 msWriteProfilerMark("Fragment:cSS:makeDocFragNoHref:S");
@@ -1455,7 +1456,7 @@ var InvalidHandler = "Invalid data-win-control attribute";
 
         // UNDONE: support cancellation, route errors
         //
-        msWriteProfilerMark("Fragment:clone:S");
+        //msWriteProfilerMark("Fragment:clone:S");
         initialize();
 
         return controlStaticState(href).then(function (v) {
